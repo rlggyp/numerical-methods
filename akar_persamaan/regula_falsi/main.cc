@@ -39,9 +39,9 @@ int main()
 		c = (b*fa - a*fb) / (fa - fb);
 		fc = f(c);
 
-   	printf("\nn\ta\tb\tc\tf(c)\n");
-   	printf("==========================================\n");
-  	printf("%d\t%.3f\t%.3f\t%.3f\t%.3f\t\n", i, a, b, c, f(c));
+		printf("\nn\ta\tb\tc\tf(c)\n");
+		printf("==========================================\n");
+		printf("%d\t%.3f\t%.3f\t%.3f\t%.3f\t\n", i, a, b, c, f(c));
 
 		while (fabs(fc) >= toleransi)
 		{
@@ -58,7 +58,7 @@ int main()
 			fc = f(c);
 
 			++i;
-  		printf("%d\t%.3f\t%.3f\t%.3f\t%.3f\t\n", i, a, b, c, f(c));
+			printf("%d\t%.3f\t%.3f\t%.3f\t%.3f\t\n", i, a, b, c, f(c));
 		}
 
 		printf("Akar: %f\n", c);
