@@ -28,6 +28,7 @@ int main()
 	else
 	{
 		float c, fa, fb, fc, toleransi;
+		short i = 1;
 
 		printf("Masukkan toleransi: ");
 		scanf("%f", &toleransi);
@@ -38,8 +39,13 @@ int main()
 		c = (b*fa - a*fb) / (fa - fb);
 		fc = f(c);
 
+   	printf("\nn\ta\tb\tc\tf(c)\n");
+   	printf("==========================================\n");
+  	printf("%d\t%.3f\t%.3f\t%.3f\t%.3f\t\n", i, a, b, c, f(c));
+
 		while (fabs(fc) >= toleransi)
 		{
+
 			if (fa * fc < 0)
 				b = c;
 			else
@@ -50,6 +56,9 @@ int main()
 
 			c = (b*fa - a*fb) / (fa - fb);
 			fc = f(c);
+
+			++i;
+  		printf("%d\t%.3f\t%.3f\t%.3f\t%.3f\t\n", i, a, b, c, f(c));
 		}
 
 		printf("Akar: %f\n", c);
